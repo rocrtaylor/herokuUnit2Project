@@ -48,6 +48,69 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 //___________________
 // Routes
 //___________________
+
+//new 1
+app.get('/monsters/new', (req, res) => {
+  res.render('new.ejs')
+})
+
+
+//put 7
+app.put('/monsters/:id', (req, res) => {
+  Monster.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel) => {
+      res.redirect('/monsters')
+  })
+})
+
+
+//edit 6
+app.get('/monsters/:id/edit', (req, res) => {
+  Monster.findById(req.params.id, (err, foundMonster) => {
+      res.render('edit.ejs', {
+          monster: foundMonster
+      })
+  })
+})
+
+
+//delete 5
+app.delete('/monsters/:id', (req, res) => {
+  Monster.findByIdAndRemove(req.params.id, (err, data) => {
+      res.redirect('/monsters')
+  })
+})
+
+//show 4
+app.get('/monsters/:id', (req, res) => {
+  Monster.findById(req.params.id, (error, foundMonster) => {
+      res.render('show.ejs', {
+          monster: foundMonster
+      })
+  })
+})
+
+
+//index 3
+app.get('/monsters', (req, res) => {
+  Monster.find({}, (error, allMonsters) => {
+      res.render('index.ejs', {
+          monster: allMonsters
+      })
+  })
+  
+})
+
+
+// create 2
+app.post('/monsters/', (req, res) => {
+  Monster.create(req.body, (error, createdMonster) => {
+      res.redirect('/monsters')
+  })
+  
+})
+
+
+
 //localhost:3000
 app.get('/' , (req, res) => {
   res.send("Werewolf bar mitvah spooky scary...., excuse me sir do you validate parking?...");

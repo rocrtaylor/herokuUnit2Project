@@ -3,7 +3,8 @@
 //___________________
 const express = require('express');
 const methodOverride  = require('method-override');
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
+const Monster = require('./models/monsters.js')
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -112,8 +113,9 @@ app.post('/monsters/', (req, res) => {
 
 
 //localhost:3000
-app.get('/' , (req, res) => {
-  res.send("Werewolf bar mitvah spooky scary...., excuse me sir do you validate parking?...");
+app.get('/', (req, res) => {
+  res.redirect('/monsters')
+  // res.send('Hello World!');
 });
 
 //___________________

@@ -2,9 +2,10 @@
 //Dependencies
 //___________________
 const express = require('express');
-const methodOverride  = require('method-override');
 const mongoose = require('mongoose');
 const Monster = require('./models/monsters.js')
+const perm = require('./models/monstersPerm.js')
+const methodOverride  = require('method-override');
 const app = express ();
 const db = mongoose.connection;
 require('dotenv').config()
@@ -95,7 +96,8 @@ app.get('/monsters/:id', (req, res) => {
 app.get('/monsters', (req, res) => {
   Monster.find({}, (error, allMonsters) => {
       res.render('index.ejs', {
-          monster: allMonsters
+        monster: allMonsters,
+        roc:perm
       })
   })
   

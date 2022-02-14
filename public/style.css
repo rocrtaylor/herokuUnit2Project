@@ -1,0 +1,27 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+ul {
+  list-style-type: none;
+}
+input {
+  background-color: black;
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding-top: 3em;
+  padding-bottom: 4em;
+}
+
+nav {
+  padding-bottom: 5em;
+}

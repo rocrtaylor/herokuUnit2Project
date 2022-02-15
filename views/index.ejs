@@ -7,38 +7,40 @@
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <h1>Monsters That Didn't Make The Cut:(</h1>
     <ul>
             <!-- permanent monsters -->
-            
-            <% for(let i = 0; i < roc.length; i++){ %> 
+
+            <% for(let i = 0; i < roc.length; i++){ %>
                 <section>
-                   <h2><%=roc[i].name%></h2> 
+                   <h2><%=roc[i].name%></h2>
                    <img src="<%=roc[i].image%>" alt="">
-                   <p><%=roc[i].story%></p>
+                   <p>Location: <%=roc[i].location%></p>
+            <p>Story: <%=roc[i].story%></p>
                 </section>
                <%} %>
-            
-        
+
+
                <!-- created monsters in mongodb -->
-        
+
                 <% for(let i = 0; i < monster.length; i++) { %>
                     <section>
                 <li>
                    <h2> <a href="/monsters/<%=monster[i].id%>">
                     <%=monster[i].name%>
                 </a></h2>
-        
-                <p><%=monster[i].story%></p>
-        
+
+                <p>Location: <%=monster[i].location%></p>
+        <p>Story: <%=monster[i].story%></p>
+
                 <form action="/monsters/<%=monster[i].id%>?_method=DELETE" method="POST">
                     <input type="submit" value="DELETE">
                 </form>
-                
+
                     <a href="/monsters/<%=monster[i].id%>/edit">Edit</a>
                 </li>
             </section>

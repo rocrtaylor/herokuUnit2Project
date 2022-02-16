@@ -1,1 +1,66 @@
 
+* {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+body {
+  text-align: center;
+  color: white;
+  margin: 0 5%;
+  /* max-width: 80vw; */
+}
+#title {
+  font-family: "Tangerine", cursive;
+  font-size: 5em;
+
+  animation-name: moveInLeft;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+}
+.subTitle {
+  font-family: "Bad Script", cursive;
+  color: dimgray;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+input {
+  background-color: black;
+  color: white;
+  margin: 1em;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+nav {
+  padding-top: 2em;
+  padding-bottom: 5em;
+}
+
+img {
+  max-width: 25vw;
+}
+
+img:hover {
+  transition: all 0.5s;
+  transform: scale(1.3);
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

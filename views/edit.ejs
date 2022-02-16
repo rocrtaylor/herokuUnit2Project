@@ -8,12 +8,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Tangerine&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
   </head>
   <body>
-    <h1>Edit Monster Page</h1>
+    <h1 id="title">Edit Monster Page</h1>
+    <form action="/monsters/<%=monster.id%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=monster.name%>" /><br />
+      Location:
+      <input type="text" name="location" value="<%=monster.location%>" /><br />
+      Story:
+      <input type="text" name="story" value="<%=monster.story%>" /><br /><br />
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
   </body>
 </html>

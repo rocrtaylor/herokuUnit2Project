@@ -8,12 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Tangerine&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
   </head>
   <body>
-    <h1>New Monster</h1>
+    <h1 id="title">New Monster</h1>
+    <form action="/monsters" method="POST">
+      Name: <input type="text" name="name" /><br />
+      Location: <input type="text" name="location" /><br />
+      Story: <input type="text" name="story" /><br />
+      <input type="submit" value="Create Monster" />
+    </form>
   </body>
 </html>

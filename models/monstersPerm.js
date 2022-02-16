@@ -22,7 +22,7 @@ const monstersPermanent = [
     name: "Ernie McKraken",
     image: "/image/ernie.png",
     story:
-      "Being the cousin of the famous kraken is diffucult when you have the low end of the gene pool. Unlike his Octopus cousin, Ernie is a jellyfish with No tentacle strength",
+      " Unlike his Octopus cousin, Ernie is a jellyfish with No tentacle strength",
     location: "The Deep",
   },
   {
@@ -43,7 +43,7 @@ const monstersPermanent = [
     name: "Lochness Lobster",
     image: "/image/lobster.png",
     story:
-      "Long being trapped in his cave by that jerk nessy, very few sightings have been reported. Only known fear is butter",
+      "Long being trapped in a cave by that jerk nessy, very few sightings have been reported. Only known fear is butter",
     location: "The Loch",
   },
 ];

@@ -7,7 +7,7 @@
   <dd>Node.js, Express, Mongoose, MongoDB, JS, EJS,</dd>
 
 <dt>Approach</dt>
-  <dd> Build CRUD APP using the 7 routes provided by GA</dd>
+  <dd> Build CRUD APP using the 7 routes outline provided by GA</dd>
 
 <dt>Unsolved Problems</dt>
   <dd>None. All criteria was accomplished and completed</dd>

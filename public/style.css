@@ -1,4 +1,3 @@
-
 * {
   font-family: "Roboto", sans-serif;
   background-color: black;
@@ -46,6 +45,8 @@ nav {
 
 img {
   max-width: 25vw;
+  border: 3px white solid;
+  border-radius: 25px;
 }
 
 img:hover {
@@ -63,4 +64,44 @@ img:hover {
     opacity: 1;
     transform: translate(0);
   }
+}
+
+/* Jonas schmed course */
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 20px 30px;
+  color: white;
+  background-color: black;
+  border-radius: 55%;
+  border: 2px white solid;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.808);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn::after {
+  background-color: #fff;
 }

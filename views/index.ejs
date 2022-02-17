@@ -49,16 +49,16 @@
             action="/monsters/<%=monster[i].id%>?_method=DELETE"
             method="POST"
           >
-            <input type="submit" value="DELETE" />
+            <input class="btn" type="submit" value="DELETE" />
           </form>
 
-          <a href="/monsters/<%=monster[i].id%>/edit">~: Edit :~</a>
+          <a class="btn" href="/monsters/<%=monster[i].id%>/edit">~: Edit :~</a>
         </li>
       </section>
       <br />
       <%} %>
     </ul>
 
-    <nav><a href="/monsters/new">~: Create a New Monster :~</a></nav>
+    <nav><a href="/monsters/new" class="btn">~: Create a New Monster :~</a></nav>
   </body>
 </html>

@@ -1,12 +1,13 @@
 * {
   font-family: "Roboto", sans-serif;
-  background-color: black;
 }
 body {
   text-align: center;
   color: white;
   margin: 0 5%;
   /* max-width: 80vw; */
+  /* background-color: lightgrey; */
+  background-color: black;
 }
 #title {
   font-family: "Tangerine", cursive;
@@ -15,6 +16,12 @@ body {
   animation-name: moveInLeft;
   animation-duration: 4s;
   animation-timing-function: ease-out;
+}
+
+#one {
+  font-family: "Tangerine", cursive;
+  font-size: 5em;
+  margin-top: 30rem;
 }
 .subTitle {
   font-family: "Bad Script", cursive;
@@ -45,8 +52,8 @@ nav {
 
 img {
   max-width: 25vw;
-  border: 3px white solid;
-  border-radius: 25px;
+  border: 5px white solid;
+  border-radius: 10px;
 }
 
 img:hover {
@@ -99,9 +106,111 @@ img:hover {
 }
 
 .btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
+  transform: scaleX(1.8) scaleY(1.6);
   opacity: 0;
 }
 .btn::after {
   background-color: #fff;
+}
+
+/* --------------------------------- */
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(112, 111, 111, 0.797),
+      rgba(0, 0, 0, 0.792)
+    ),
+    url(image/cityburning.jpeg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+
+/* centering the text */
+
+.text-box {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  font-family: "Redressed", cursive;
+  display: block;
+  font-size: 100px;
+  letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 5s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 30px;
+  letter-spacing: 23px;
+  margin-top: 2rem;
+
+  animation-name: moveInRight;
+  animation-duration: 4s;
+}
+
+/* animations */
+
+/* animation-text */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  60% {
+    transform: rotate3d(1, 2, 2, 100deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.buttons {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-yellow {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn-red {
+  background-color: #fff;
+  color: #777;
+}
+.btn-yellow::after {
+  background-color: yellow;
+}
+
+.btn-red::after {
+  background-color: red;
 }

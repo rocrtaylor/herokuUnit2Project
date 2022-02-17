@@ -9,14 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@500&family=Tangerine&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Roboto:wght@500&family=Tangerine&family=PT+Sans&family=Redressed&display=swap"
       rel="stylesheet"
     />
 
     <title>Document</title>
   </head>
   <body>
-    <h1 id="title">
+    <header class="header">
+      <div class="text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main"
+            >Mon<span style="color: red">s</span>ters</span
+          >
+          <span class="heading-primary-sub"
+            >are coming for yo<span style="color: red">u</span></span
+          >
+        </h1>
+        <div class="buttons">
+          <div><a href="#" class="btn btn-yellow">Run</a></div>
+          <div><a href="#" class="btn btn-red">Fight</a></div>
+        </div>
+      </div>
+    </header>
+    <!-- <h1 > id="title" -->
+    <h1 id="one">
       Monsters That Didn't Make The Cut <span style="color: red">:</span>(
     </h1>
     <ul>
@@ -59,6 +76,8 @@
       <%} %>
     </ul>
 
-    <nav><a href="/monsters/new" class="btn">~: Create a New Monster :~</a></nav>
+    <nav>
+      <a href="/monsters/new" class="btn">~: Create a New Monster :~</a>
+    </nav>
   </body>
 </html>
